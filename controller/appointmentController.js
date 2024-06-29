@@ -23,7 +23,7 @@ const createInvoice = async () => {
             quantity: 1,
         }],
         mode: 'payment',
-        success_url: `https://lifeline-healthcare-login.netlify.app/appointment?payment=success`,
+        success_url: `${process.env.FRONTEND_URL}?payment=success`,
         cancel_url: `${process.env.FRONTEND_URL}?payment=canceled`,
     });
     return {
